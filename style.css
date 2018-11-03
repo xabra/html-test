@@ -2,41 +2,68 @@ body {
   color: #fff;
   font-family: "Arial";
   text-align: center;
-  align-items: center;
-  justify-content: center;
 }
 
 #content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto minmax(200px, auto) auto;
-  grid-gap: 3px;
-  max-width: 900px;
-  margin: auto;
+  grid-template-columns: 130px 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
+  grid-template-rows: 60px minmax(500px, auto) 70px;
   grid-template-areas:
-    "header header header header"
-    "main main main main"
-    "footer footer footer footer";
+    "logo header header header header header "
+    "sidebar main main main main main"
+    "footer footer footer footer footer footer";
 }
 
 header {
   grid-area: header;
-  color: black;
-  margin: 20;
-  padding: 60;
-  background: rgb(106, 115, 245);
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  background: rgb(37, 32, 109);
 }
-
+#logo {
+  grid-area: logo;
+  color: rgb(236, 236, 236);
+  background: rgb(37, 32, 109);
+  padding: 5px;
+}
 main {
   grid-area: main;
   color: black;
-  background: rgb(246, 246, 246);
+  background: rgb(256, 256, 256);
+  padding: 15px;
 }
 
 footer {
   grid-area: footer;
   color: rgb(93, 93, 93);
   background: rgb(212, 212, 212);
-  padding: 5px;
+  padding: 8px;
   font-size: 12px;
+}
+#sidebar {
+  grid-area: sidebar;
+  color: rgb(82, 82, 82);
+  background: rgb(255, 255, 255);
+  padding: 5px;
+  font-size: 16px;
+  border-right-width: 1px;
+  border-right-color: rgb(196, 196, 196);
+  border-right-style: solid;
+}
+
+a {
+  text-decoration: none;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
 }
