@@ -7,14 +7,17 @@ body {
 #content {
   display: grid;
   grid-template-columns: 130px 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
-  grid-template-rows: 60px minmax(500px, auto) 70px;
+  grid-template-rows: 60px minmax(500px, auto) 76px;
   grid-template-areas:
     "logo header header header header header "
     "sidebar main main main main main"
     "footer footer footer footer footer footer";
 }
 
+/* Header has a sub-grid*/
 header {
+  display: grid;
+  grid-template-columns: 17fr 1fr 1fr;
   grid-area: header;
   color: rgb(255, 255, 255);
   padding: 12px;
@@ -24,7 +27,11 @@ header {
   grid-area: logo;
   color: rgb(236, 236, 236);
   background: rgb(37, 32, 109);
-  padding: 5px;
+  padding: 7px;
+}
+#organization {
+  padding: 10px;
+  color: rgb(236, 236, 236);
 }
 main {
   grid-area: main;
